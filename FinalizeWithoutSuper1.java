@@ -17,4 +17,11 @@ public class FinalizeWithoutSuper1
            
         }
     }
+	
+	 protected final Object clone() throws CloneNotSupportedException 
+    {
+    	CloneWithoutSuper objectBad = new CloneWithoutSuper();     
+        objectBad.setDate(new Date(theDate.getTime()));
+        return objectBad;
+    }
     }
